@@ -1,0 +1,60 @@
+#include <18F26K80.h>
+#device ADC=10
+
+#FUSES NOMCLR
+#FUSES NOWDT                    //No Watch Dog Timer
+//#FUSES WDT128                   //Watch Dog Timer uses 1:128 Postscale
+#FUSES NOBROWNOUT               //No brownout reset
+//#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+#FUSES NOXINST                  //Extended set extension and Indexed Addressing mode disabled (Legacy mode)
+
+#use delay(internal=16MHz)
+
+#use rs232 (baud=9600, xmit=PIN_C6, rcv=PIN_C7, stream=PC)
+
+#define PC_MSG(msg) fprintf(PC, msg)
+#define PC_DATA(msg,data) fprintf(PC, msg, data)
+
+void init_pic(){   
+   setup_adc_ports(NO_ANALOGS);
+   
+   //enable_interrupts(int_rda);   
+   //enable_interrupts(GLOBAL);
+}
+
+void MotivoInicializacao(){   
+
+   delay_ms(200);
+
+   switch ( restart_cause() )
+   {
+      case WDT_TIMEOUT:
+         PC_MSG("EVT_WDT_TIMEOUT=1:1*");
+         delay_ms(200);
+         break;
+      case WDT_FROM_SLEEP:
+         PC_MSG("EVT_WDT_SLEEP=1:1*");
+         delay_ms(200);
+         break;
+      case MCLR_FROM_RUN:
+         PC_MSG("EVT_MCLR_FROM_RUN=1:1*");
+         delay_ms(200);
+         break;
+      case BROWNOUT_RESTART:
+         PC_MSG("EVT_BROWNOUT_RESTART=1:1*");
+         delay_ms(200);
+         break;
+      case  MCLR_FROM_SLEEP:
+         PC_MSG("EVT_MCLR_FROM_SLEEP=1:1*");
+         delay_ms(200);
+         break;
+      case  RESET_INSTRUCTION:
+         PC_MSG("EVT_RESET_INSTRUCTION=1:1*");
+         delay_ms(200);
+         break;
+      case  NORMAL_POWER_UP:
+         PC_MSG("EVT_NORMAL_POWER_UP=1:1*");
+         delay_ms(200);
+         break;
+   }
+}

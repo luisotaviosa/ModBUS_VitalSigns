@@ -1,0 +1,19 @@
+#include <main.h>
+
+#define LOADER_END   0x5FF
+#include <bootloader.h>
+
+void main()
+{  
+   initialize();
+   
+   while(TRUE){
+      
+      read_all_input_reg(add);
+   
+      if (kbhit()){
+         evt_serial();
+      }
+   }
+}
+

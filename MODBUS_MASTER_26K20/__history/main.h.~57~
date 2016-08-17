@@ -1,0 +1,47 @@
+#include <hardware.h>
+#include <stdlib.h>
+#include <variaveis.c>
+#include <modbus_local.c>
+#include <umodbus.c>
+#include <userial.c>
+
+void init_pic(){   
+   setup_adc_ports(NO_ANALOGS);
+}
+
+void MotivoInicializacao(){   
+
+   delay_ms(200);
+
+   switch ( restart_cause() )
+   {
+      case WDT_TIMEOUT:
+         PC_MSG("EVT_WDT_TIMEOUT=1:1*");
+         delay_ms(200);
+         break;
+      case WDT_FROM_SLEEP:
+         PC_MSG("EVT_WDT_SLEEP=1:1*");
+         delay_ms(200);
+         break;
+      case MCLR_FROM_RUN:
+         PC_MSG("EVT_MCLR_FROM_RUN=1:1*");
+         delay_ms(200);
+         break;
+      case BROWNOUT_RESTART:
+         PC_MSG("EVT_BROWNOUT_RESTART=1:1*");
+         delay_ms(200);
+         break;
+      case  MCLR_FROM_SLEEP:
+         PC_MSG("EVT_MCLR_FROM_SLEEP=1:1*");
+         delay_ms(200);
+         break;
+      case  RESET_INSTRUCTION:
+         PC_MSG("EVT_RESET_INSTRUCTION=1:1*");
+         delay_ms(200);
+         break;
+      case  NORMAL_POWER_UP:
+         PC_MSG("EVT_NORMAL_POWER_UP=1:1*");
+         delay_ms(200);
+         break;
+   }
+}

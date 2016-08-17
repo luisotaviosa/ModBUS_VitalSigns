@@ -1,0 +1,381 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     rs232_errors
+018-019 strtok.save
+01A-01D _Randseed
+01E.0   modbus_serial_new
+01E.1   modbus_timeout_enabled
+01F-062 modbus_rx
+063-064 UPPER_TICKS_1
+065-068 modbus_serial_wait
+069     modbus_serial_state
+06A-06B modbus_serial_crc
+06C-07F received
+080-093 tmp
+094-097 comando
+098-0A9 param
+0AA-0AD endereco
+0AE-0B7 valor
+0B8-0BB evt_serial.TIMEOUT
+0BC     evt_serial.cont
+0BD     evt_serial.tmp
+0BE-0C1 decodifica.comando
+0BE     evt_serial.@SCRATCH1
+0BF     evt_serial.@SCRATCH2
+0C2-0D5 decodifica.tmp
+0D6     comando_get.i
+0D6     comando_set.i
+0D6     decodifica.@SCRATCH1
+0D7     comando_set.inicio
+0D7     comando_get.inicio
+0D7     decodifica.@SCRATCH2
+0D8     tratar_GET.add
+0D8     tratar_SET.@SCRATCH1
+0D8     comando_set.@SCRATCH1
+0D8     comando_get.@SCRATCH1
+0D9     tratar_GET.add
+0D9     tratar_SET.@SCRATCH2
+0D9     comando_set.@SCRATCH2
+0D9     comando_get.@SCRATCH2
+0DA     tratar_GET.add
+0DA     comando_set.@SCRATCH3
+0DA     comando_get.@SCRATCH3
+0DB     tratar_GET.add
+0DC     tratar_GET.add
+0DD     read_vitais.MODBUS_SLAVE_ADDRESS
+0DD     read_all_holding.MODBUS_SLAVE_ADDRESS
+0DD     read_all_coils.MODBUS_SLAVE_ADDRESS
+0DD     read_temperatura.MODBUS_SLAVE_ADDRESS
+0DD     read_all_input_reg.MODBUS_SLAVE_ADDRESS
+0DD-0DE strcmp.s1
+0DD-0DE atoi.s
+0DD     tratar_GET.@SCRATCH1
+0DE     read_all_holding.i
+0DE     read_all_input_reg.i
+0DE     read_temperatura.cont
+0DE     read_all_coils.i
+0DE     read_vitais.cont
+0DE     tratar_GET.@SCRATCH2
+0DF     modbus_read_coils.address
+0DF-0E0 read_vitais.BPM
+0DF-0E0 strcmp.s2
+0DF     read_temperatura.sign
+0DF     modbus_read_input_registers.address
+0DF     atoi.result
+0DF     read_all_coils.@SCRATCH1
+0DF     @PSTRINGC_9600_31766_31767.@SCRATCH1
+0DF     read_all_holding.@SCRATCH1
+0DF     read_all_input_reg.@SCRATCH1
+0E0-0E1 modbus_read_coils.start_address
+0E0     atoi.sign
+0E0-0E1 read_temperatura.sensData
+0E0-0E1 modbus_read_input_registers.start_address
+0E0     @PSTRINGC_9600_31766_31767.@SCRATCH2
+0E1-0E2 @PRINTF_LU_9600_31766_31767.P1
+0E1     atoi.base
+0E1     strcmp.@SCRATCH1
+0E2-0E3 modbus_read_coils.quantity
+0E2-0E3 read_temperatura.fract
+0E2     atoi.index
+0E2-0E3 modbus_read_input_registers.quantity
+0E3     atoi.c
+0E3     @PRINTF_LU_9600_31766_31767.@SCRATCH1
+0E4     @MUL88.P1
+0E4     read_temperatura.tmp
+0E4     atoi.@SCRATCH1
+0E4     modbus_read_coils.@SCRATCH1
+0E4     modbus_read_input_registers.@SCRATCH1
+0E4     @PRINTF_LU_9600_31766_31767.@SCRATCH2
+0E5     @MUL88.P1
+0E5-0E8 read_temperatura.celsius
+0E5     atoi.@SCRATCH2
+0E5     @PRINTF_LU_9600_31766_31767.@SCRATCH3
+0E6     @PRINTF_LU_9600_31766_31767.@SCRATCH4
+0E7     @PRINTF_LU_9600_31766_31767.@SCRATCH5
+0E8     @PRINTF_LU_9600_31766_31767.@SCRATCH6
+0E9     read_temperatura.i
+0E9     @PRINTF_LU_9600_31766_31767.@SCRATCH7
+0EA-0ED read_temperatura.temp
+0EE     modbus_read_holding_registers.address
+0EE-0F1 @PRINTF_L32D_9600_31766_31767FPFPF.P1
+0EE     @PSTRINGCN_9600_31766_31767.P2
+0EE-0F1 @ADDFF.P3
+0EE     @PRINTF_X_9600_31766_31767.P4
+0EE     @delay_ms1.P5
+0EE-0F1 @FLT.P6
+0EE     @PRINTF_U_9600_31766_31767.P7
+0EE     read_temperatura.@SCRATCH1
+0EF-0F0 @ITOF.P1
+0EF-0F0 modbus_read_holding_registers.start_address
+0EF     @PRINTF_X_9600_31766_31767.P1
+0EF     @PRINTF_U_9600_31766_31767.P2
+0EF     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+0EF     read_temperatura.@SCRATCH2
+0F0     @DIV88.P1
+0F0     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+0F1-0F2 modbus_read_holding_registers.quantity
+0F1     @DIV88.P1
+0F2     @PRINTF_L32D_9600_31766_31767FPFPF.P1
+0F2-0F5 @ADDFF.P2
+0F2-0F5 @FLT.P3
+0F2     @DIV88.@SCRATCH1
+0F3     modbus_serial_send_start.to
+0F3     modbus_serial_send_stop.crc_low
+0F3     modbus_check_timeout.@SCRATCH1
+0F3     modbus_read_holding_registers.@SCRATCH1
+0F3     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH1
+0F4     modbus_serial_send_stop.crc_high
+0F4     modbus_serial_send_start.func
+0F4     modbus_check_timeout.@SCRATCH2
+0F4     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH2
+0F5     modbus_serial_putc.c
+0F5     modbus_serial_send_start.@SCRATCH1
+0F5     modbus_serial_send_stop.@SCRATCH1
+0F5     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH3
+0F6     @PUTCHAR_2_.P1
+0F6     @delay_us1.P2
+0F6     @ADDFF.@SCRATCH1
+0F6     @FLT.@SCRATCH1
+0F6     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH4
+0F7     @ADDFF.@SCRATCH2
+0F7     @PUTCHAR_2_.@SCRATCH1
+0F7     @FLT.@SCRATCH2
+0F7     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH5
+0F8     @ADDFF.@SCRATCH3
+0F8     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH6
+0F9     @ADDFF.@SCRATCH4
+0F9     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH7
+0FA     @ADDFF.@SCRATCH5
+0FA     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH8
+0FB-0FE @FTOSD.P1
+0FB-0FE @MULFF.P2
+0FB-0FE @DIV3232.P3
+0FB     @ADDFF.@SCRATCH6
+0FC     @ADDFF.@SCRATCH7
+0FD     @ADDFF.@SCRATCH8
+0FF-102 @DIV3232.P1
+0FF-102 @MULFF.P2
+0FF     @FTOSD.@SCRATCH1
+103     @MULFF.@SCRATCH1
+103     @DIV3232.@SCRATCH1
+104     @MULFF.@SCRATCH2
+104     @DIV3232.@SCRATCH2
+105     @MULFF.@SCRATCH3
+105     @DIV3232.@SCRATCH3
+106     @DIV3232.@SCRATCH4
+107     @DIV3232.@SCRATCH5
+108     incomming_modbus_serial.c
+109     modbus_calc_crc.data
+109     modbus_enable_timeout.enable
+109     @GETCH_2_.@SCRATCH1
+109     incomming_modbus_serial.@SCRATCH1
+10A     modbus_calc_crc.uIndex
+10A-10B @SET_TICKS_1.P1
+10A     @GETCH_2_.@SCRATCH2
+10A     incomming_modbus_serial.@SCRATCH2
+10B     modbus_calc_crc.@SCRATCH1
+F7A.6   C2OUT
+F7B.6   C1OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0006A2  modbus_auchCRCHi.call
+0006C4  modbus_auchCRCHi.data
+0007C4  modbus_auchCRCLo.call
+0007E6  modbus_auchCRCLo.data
+0008E6  @const1199.call
+000906  @const1202.call
+00092A  @const1204.call
+00094A  @const1206.call
+000968  @const1208.call
+000986  @const1210.call
+0009A8  @const1221.call
+0009C6  @const1222.call
+0009E4  @TIMERISR_1
+0009F0  @GETCH_2_
+000A50  @SET_TICKS_1
+000A72  modbus_enable_timeout
+000A84  modbus_calc_crc
+000AC8  incomming_modbus_serial
+000B38  @const1082.call
+000B42  @const1084.call
+000B4A  @const1086.call
+000B60  @const1095.call
+000B66  @const1096.call
+000B7C  @const1099.call
+000B86  @const1100.call
+000B8E  @const1103.call
+000B94  @const1117.call
+000BA6  @const1126.call
+000BBE  @const1131.call
+000BD0  @const1134.call
+000BE6  @const1137.call
+000BFC  @const1138.call
+000C04  @const1141.call
+000C0A  @const1142.call
+000C24  @const1145.call
+000C2C  @const1148.call
+000C32  @const1151.call
+000C4A  @const1152.call
+000C52  @const1155.call
+000C58  @const1156.call
+000C72  @const1159.call
+000C8E  @const1160.call
+000C96  @const1163.call
+000C9C  @const1164.call
+000CB6  @const1168.call
+000CD0  @const1169.call
+000CD8  @const1172.call
+000CDE  @const1173.call
+000CF8  @const1177.call
+000D16  @const1178.call
+000D1E  @const1181.call
+000D24  @const1182.call
+000D3E  @const1185.call
+000D58  @const1186.call
+000D66  @const1187.call
+000D6C  @const1190.call
+000D72  @const1191.call
+000D8C  @const1200.call
+000D9C  @const1228.call
+000DB2  @const1229.call
+000DC6  @const1230.call
+000DDE  @const1231.call
+000DF8  @const1232.call
+000E12  @const1233.call
+000E2E  @const1234.call
+000E48  @delay_ms1
+000E70  @PSTRINGC_9600_31766_31767
+000E92  MotivoInicializacao
+000F34  @goto12919
+000F78  RCV_ON
+000F84  modbus_init
+000F92  initialize
+000FA8  @FLT
+00101E  @GETCH_BIU_1
+001036  @ADDFF
+0012A0  strcmp
+001314  tratar_SET
+00135E  comando_set
+00147E  @MUL88
+0014CA  atoi
+001664  @delay_us1
+00167E  @PUTCHAR_2_
+0016E2  modbus_serial_putc
+001708  modbus_serial_send_start
+001730  modbus_serial_send_stop
+00175E  @GET_TICKS_1
+001794  modbus_timeout_now
+0017D0  modbus_check_timeout
+0017EE  modbus_kbhit
+001810  modbus_read_coils
+00189E  @PSTRINGCN_9600_31766_31767
+0018BE  @DIV88
+0018E6  @PRINTF_U_9600_31766_31767
+001952  @PRINTF_X_9600_31766_31767
+001994  read_all_coils
+001A56  modbus_read_holding_registers
+001AE2  @ITOF
+001B18  @MULFF
+001C3C  @FTOSD
+001C7C  @DIV3232
+001D20  @PRINTF_L32D_9600_31766_31767FPFPF
+001EAA  read_temperatura
+0020A8  @PRINTF_LU_9600_31766_31767
+00214E  read_vitais
+002216  read_all_holding
+0022B4  modbus_read_input_registers
+002350  read_all_input_reg
+0023B4  tratar_GET
+00252C  comando_get
+0025EE  decodifica
+002672  evt_serial
+002726  @cinit1
+002726  MAIN
+002786  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    \\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_MASTER_26K20\
+
+Project Files:
+    main.c                                                  [14-ago-16 08:47  CRC=294DF0C8]
+    main.h                                                  [01-ago-16 00:48  CRC=7F629320]
+    hardware.h                                              [02-ago-16 00:05  CRC=E1D6E02A]
+    C:\Program Files (x86)\PICC\Devices\18F26K20.h          [21-jun-13 16:05  CRC=8A30A5A2]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [08-jun-11 14:39  CRC=0B6669CF]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-jul-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [14-jul-11 10:13  CRC=23EDEC8F]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-jan-08 13:55  CRC=2D1F019F]
+    variaveis.c                                             [01-ago-16 01:01  CRC=4FA9BCC3]
+    modbus_local.c                                          [30-jul-16 07:00  CRC=EA58E84A]
+    modbus_local.h                                          [30-jul-16 06:58  CRC=26E71866]
+    modbus_phy_layer_local.h                                [30-mai-13 14:23  CRC=CDB534E3]
+    modbus_app_layer_local.h                                [30-jul-16 06:59  CRC=B8DB7659]
+    modbus_phy_layer_rtu_local.c                            [30-jul-16 07:00  CRC=5FE606E1]
+    C:\Program Files (x86)\PICC\Drivers\modbus_app_layer.c  [16-mai-13 10:53  CRC=C73EB0AA]
+    C:\Program Files (x86)\PICC\Drivers\modbus_app_layer.h  [16-mai-13 11:41  CRC=CCCEAEAD]
+    umodbus.c                                               [15-ago-16 14:54  CRC=0640ED3C]
+    userial.c                                               [15-ago-16 13:54  CRC=3B876ED4]
+    C:\Program Files (x86)\PICC\Drivers\bootloader.h        [13-fev-13 08:49  CRC=183DC8B7]
+
+Source signature=485A0A82
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F26K20
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

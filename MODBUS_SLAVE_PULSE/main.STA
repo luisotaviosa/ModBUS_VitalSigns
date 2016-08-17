@@ -1,0 +1,127 @@
+
+ROM used:   8048/32768 (12%)
+            8052/32768 (12%) including unused fragments
+
+            1.2 Average locations per line
+            8.2 Average locations per statement
+
+RAM used:   232/3648 (6%) at main() level
+            292/3648 (8%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   53    27   3  main.c
+   10     0   0  main.h
+   17     0   0  hardware.h
+  896     0   0  C:\Program Files (x86)\PICC\Devices\18F26K80.h
+ 1351   359  36  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+  423   125  13  C:\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+   35     0   0  variaveis.c
+   69    37   4  pulse.c
+   70    33   3  ctemp.c
+  257   114  12  onewire.c
+  134    63   6  umodbus.c
+   88     0   0  modbus_local.c
+  199     0   0  modbus_local.h
+  200     0   0  modbus_phy_layer_local.h
+  597     0   0  modbus_app_layer_local.h
+  390    64   6  modbus_phy_layer_rtu_local.c
+ 1046   163  17  C:\Program Files (x86)\PICC\Drivers\modbus_app_layer.c
+  597     0   0  C:\Program Files (x86)\PICC\Drivers\modbus_app_layer.h
+  163     0   0  C:\Program Files (x86)\PICC\Drivers\stdint.h
+  103     0   0  C:\Program Files (x86)\PICC\Drivers\bootloader.h
+----- -----
+ 6758   985 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     42   0    1             @delay_ms1
+0     32   0    1             @delay_us1
+0    246   2   11             @MULFF
+0     54   0    2             @ITOF
+0    632   4   16             @ADDFF
+0     68   0    5             @DIV1616
+0    448   3    8   508  6.0  ISR
+0    122   1   10             @FLT
+0    186   1    0   571  7.0  ler_batidas
+0     18   0    0             @const964
+0     42   0    3             @PSTRINGCN_9600_31766_31767
+0     40   0    3             @DIV88
+0    110   1    2             @PRINTF_U_9600_31766_31767
+0    166   1    9             @PRINTF_LU_9600_31766_31767
+0     86   1    8   528  7.8  calc_CRC
+0     70   0    2   165  2.2  ow_reset
+0     38   0    0   102  1.7  read_bit
+0     38   0    1   132  2.2  write_bit
+0     72   0    2   206  5.2  read_byte
+0     60   0    3   199  4.5  write_byte
+0     28   0    1    59  2.3  ow_crc
+0    318   2   11  1670 11.4  Next
+0     12   0    0    56  1.9  First
+0    128   1    5   338  6.4  FindDevices
+0     98   1    3   199  4.5  Send_MatchRom
+0    592   4   23  1758  8.0  le_DS18B20
+0     12   0    0             @const1029
+0     68   0    5             @FTOSD
+0    148   1   13             @DIV3232
+0    418   3   13             @PRINTF_L32D_9600_31766_31767FPFPF
+0     12   0    0             @TIMERISR_1
+0     54   0    0             @GET_TICKS_1
+0     34   0    2             @SET_TICKS_1
+0    100   1    2             @PUTCHAR_2_
+0     96   1    2             @GETCH_2_
+0    290   2    0             @const1201
+0    290   2    0             @const1204
+0     12   0    0   123  2.0  RCV_ON
+0     18   0    1    43  1.5  modbus_enable_timeout
+0     58   0    0   259  5.0  modbus_timeout_now
+0     30   0    2    80  2.7  modbus_check_timeout
+0     68   0    3   230  3.2  modbus_calc_crc
+0     38   0    1    88  2.1  modbus_serial_putc
+0     46   0    3   235  4.0  modbus_serial_send_start
+0     54   0    3   454  4.9  modbus_serial_send_stop
+0    100   1    3   724  6.0  incomming_modbus_serial
+0     14   0    0    47  1.3  modbus_init
+0     36   0    0   267  5.5  modbus_kbhit
+0     60   0    6   258  5.3  modbus_read_discrete_input_rsp
+0    108   1    8   351  5.5  modbus_read_holding_registers_rsp
+0    108   1    8   351  5.5  modbus_read_input_registers_rsp
+0     56   0    6   270  2.1  modbus_write_single_coil_rsp
+0     56   0    6   270  2.1  modbus_write_single_register_rsp
+0     56   0    6   270  2.1  modbus_write_multiple_coils_rsp
+0     56   0    6   270  2.1  modbus_write_multiple_registers_rsp
+0     28   0    6   119  2.3  modbus_exception_rsp
+0    102   1    2   464  3.8  swap_bits
+0   1000   6    6  6800 15.4  receiveFromModbus
+0     62   0    0   115  2.1  le_batidas
+0    406   3    0   372  4.8  MAIN
+0     14   0    0             @const1264
+0     36   0    2             @PSTRINGC_9600_31766_31767
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               37
+    Statements              985
+    Comments                2276
+    Volume (V)              31908
+    Difficulty (D)          161.2
+    Effort to implement (E) 5142620
+    Time to implement (T)   79 hours, 22 minutes
+    Est Delivered Bugs (B)  10
+    Cyclomatic Complexity   77
+    Maintainability (MI)    62
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-005FE     0  1536  
+00600-00606     4  4  
+00608-006A0   154  0  
+006A2-0FFFE  7890  55948  
+
+
+

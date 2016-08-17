@@ -1,0 +1,27 @@
+#include <main.h>
+
+#define LOADER_END   0x5FF
+#include <bootloader.h>
+
+#include <stdlib.h>
+#include <variaveis.c>
+#include <modbus_local.c>
+#include <umodbus.c>
+#include <userial.c>
+
+#int_rda
+void rec_serial(){ }
+
+void main()
+{
+   MotivoInicializacao();
+   init_pic();   
+   modbus_init();
+   
+   while(TRUE){
+      if (kbhit()){
+         evt_serial();
+      }
+   }
+}
+

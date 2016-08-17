@@ -1,0 +1,398 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017-018 strtok.save
+019-01C _Randseed
+01D     coils
+01E     inputs
+01F-026 hold_regs
+027-036 input_regs
+037-038 event_count
+039     pulsePin
+03A     fadeRate
+03B-03C BPM
+03D     Signal
+03E     IBI
+03F.0   Pulse
+03F.1   QS
+03F.2   doneFlag
+03F.3   modbus_serial_new
+03F.4   modbus_timeout_enabled
+040-041 p
+042-043 t
+044-045 amp
+046-047 ad_read
+048     cont
+049     qtd
+04A     flag
+04B     tentativas
+04C-053 RomBytes
+054     lastDiscrep
+055-09C FoundROM
+09D     numROMs
+09E     dowcrc
+09F-0E2 modbus_rx
+0E3-0E4 UPPER_TICKS_1
+0E5     modbus_serial_state
+0E6-0E7 modbus_serial_crc
+0E8-0EB MAIN.time
+0EC     ler_batidas.i
+0EC     receiveFromModbus.data
+0EC     le_DS18B20.i
+0EC     modbus_check_timeout.@SCRATCH1
+0EC     @PSTRINGC_9600_31766_31767.@SCRATCH1
+0ED-0EE @PRINTF_LU_9600_31766_31767.P1
+0ED     @PRINTF_U_9600_31766_31767.P2
+0ED-0EE @DIV1616.P3
+0ED     le_DS18B20.tmp
+0ED     receiveFromModbus.i
+0ED     ISR.@SCRATCH1
+0ED     modbus_check_timeout.@SCRATCH2
+0ED     @PSTRINGC_9600_31766_31767.@SCRATCH2
+0EE     @PRINTF_U_9600_31766_31767.P1
+0EE     receiveFromModbus.j
+0EE     le_DS18B20.numDev
+0EE     ISR.@SCRATCH2
+0EF-0F0 @DIV1616.P1
+0EF-0F2 le_DS18B20.celsius
+0EF     @DIV88.P1
+0EF     receiveFromModbus.i
+0EF     ISR.@SCRATCH3
+0EF     @PRINTF_LU_9600_31766_31767.@SCRATCH1
+0F0     receiveFromModbus.j
+0F0     @DIV88.P1
+0F0     ISR.@SCRATCH4
+0F0     @PRINTF_LU_9600_31766_31767.@SCRATCH2
+0F1     swap_bits.c
+0F1     modbus_exception_rsp.address
+0F1     modbus_read_discrete_input_rsp.address
+0F1     @DIV1616.@SCRATCH1
+0F1     ISR.@SCRATCH5
+0F1     @DIV88.@SCRATCH1
+0F1     @PRINTF_LU_9600_31766_31767.@SCRATCH3
+0F1     receiveFromModbus.@SCRATCH1
+0F2-0F3 modbus_exception_rsp.func
+0F2     modbus_read_discrete_input_rsp.byte_count
+0F2     ISR.@SCRATCH6
+0F2     @PRINTF_LU_9600_31766_31767.@SCRATCH4
+0F2     swap_bits.@SCRATCH1
+0F2     receiveFromModbus.@SCRATCH2
+0F3-0F4 modbus_read_discrete_input_rsp.input_data
+0F3     modbus_write_single_coil_rsp.address
+0F3-0F4 le_DS18B20.sensData
+0F3     ISR.@SCRATCH7
+0F3     @PRINTF_LU_9600_31766_31767.@SCRATCH5
+0F3     receiveFromModbus.@SCRATCH3
+0F4     modbus_read_input_registers_rsp.address
+0F4     modbus_exception_rsp.error
+0F4     modbus_read_holding_registers_rsp.address
+0F4-0F5 modbus_write_single_coil_rsp.output_address
+0F4     ISR.@SCRATCH8
+0F4     @PRINTF_LU_9600_31766_31767.@SCRATCH6
+0F4     receiveFromModbus.@SCRATCH4
+0F5     modbus_write_multiple_coils_rsp.address
+0F5     modbus_write_multiple_registers_rsp.address
+0F5     modbus_read_input_registers_rsp.byte_count
+0F5-0F6 le_DS18B20.fract
+0F5     modbus_read_holding_registers_rsp.byte_count
+0F5     modbus_read_discrete_input_rsp.i
+0F5     modbus_write_single_register_rsp.address
+0F5     @PRINTF_LU_9600_31766_31767.@SCRATCH7
+0F5     modbus_exception_rsp.@SCRATCH1
+0F5     receiveFromModbus.@SCRATCH5
+0F6-0F7 modbus_read_input_registers_rsp.input_data
+0F6-0F7 modbus_write_single_register_rsp.reg_address
+0F6-0F7 modbus_read_holding_registers_rsp.reg_data
+0F6-0F7 modbus_write_multiple_registers_rsp.start_address
+0F6-0F7 modbus_write_multiple_coils_rsp.start_address
+0F6-0F7 modbus_write_single_coil_rsp.output_value
+0F6     modbus_read_discrete_input_rsp.@SCRATCH1
+0F6     modbus_exception_rsp.@SCRATCH2
+0F6     receiveFromModbus.@SCRATCH6
+0F7-0FF le_DS18B20.scratch
+0F8     modbus_read_holding_registers_rsp.i
+0F8-0F9 modbus_write_multiple_registers_rsp.quantity
+0F8-0F9 modbus_write_multiple_coils_rsp.quantity
+0F8-0F9 modbus_write_single_register_rsp.reg_value
+0F8     modbus_read_input_registers_rsp.i
+0F8     modbus_write_single_coil_rsp.@SCRATCH1
+0F9     modbus_read_holding_registers_rsp.@SCRATCH1
+0F9     modbus_read_input_registers_rsp.@SCRATCH1
+0FA     modbus_serial_send_stop.crc_low
+0FA     modbus_serial_send_start.to
+0FA     modbus_read_holding_registers_rsp.@SCRATCH2
+0FA     modbus_read_input_registers_rsp.@SCRATCH2
+0FA     modbus_write_single_register_rsp.@SCRATCH1
+0FA     modbus_write_multiple_coils_rsp.@SCRATCH1
+0FA     modbus_write_multiple_registers_rsp.@SCRATCH1
+0FB     modbus_serial_send_start.func
+0FB     modbus_serial_send_stop.crc_high
+0FB     modbus_read_holding_registers_rsp.@SCRATCH3
+0FB     modbus_read_input_registers_rsp.@SCRATCH3
+0FC     modbus_serial_putc.c
+0FC     modbus_serial_send_start.@SCRATCH1
+0FC     modbus_serial_send_stop.@SCRATCH1
+0FD     @PUTCHAR_2_.P1
+0FE     @PUTCHAR_2_.@SCRATCH1
+100     le_DS18B20.sign
+101     le_DS18B20.i
+102-105 le_DS18B20.temperatura
+106-109 @FLT.P1
+106     FindDevices.m
+106-109 @ADDFF.P1
+106-109 @PRINTF_L32D_9600_31766_31767FPFPF.P2
+106     Send_MatchRom.i
+106     @PSTRINGCN_9600_31766_31767.P1
+106     le_DS18B20.@SCRATCH1
+107     @delay_ms1.P1
+107     FindDevices.cont
+107-108 @ITOF.P1
+107     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+107     Send_MatchRom.@SCRATCH1
+107     le_DS18B20.@SCRATCH2
+108     Next.m
+108     read_byte.i
+108     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+108     FindDevices.@SCRATCH1
+108     Send_MatchRom.@SCRATCH2
+109     read_byte.val
+109     Next.n
+109     FindDevices.@SCRATCH2
+10A     Next.k
+10A-10D @ADDFF.P1
+10A     @PRINTF_L32D_9600_31766_31767FPFPF.P2
+10A-10D @FLT.P3
+10A     FindDevices.@SCRATCH3
+10B     Next.x
+10B     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH1
+10C     Next.discrepMarker
+10C     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH2
+10D     Next.g
+10D     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH3
+10E     Next.nxt
+10E     @ADDFF.@SCRATCH1
+10E     @FLT.@SCRATCH1
+10E     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH4
+10F.0   Next.flag
+10F     @ADDFF.@SCRATCH2
+10F     @FLT.@SCRATCH2
+10F     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH5
+110     write_byte.val
+110     ow_reset.presence
+110     @ADDFF.@SCRATCH3
+110     Next.@SCRATCH1
+110     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH6
+111     ow_crc.x
+111     write_byte.i
+111     @ADDFF.@SCRATCH4
+111     ow_reset.@SCRATCH1
+111     Next.@SCRATCH2
+111     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH7
+112     @delay_us1.P1
+112     write_byte.temp
+112-113 calc_CRC.data
+112     @ADDFF.@SCRATCH5
+112     Next.@SCRATCH3
+112     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH8
+113-116 @DIV3232.P1
+113     write_bit.bitval
+113-116 @FTOSD.P1
+113-116 @MULFF.P2
+113     @ADDFF.@SCRATCH6
+114     calc_CRC.bytes
+114     @ADDFF.@SCRATCH7
+115     calc_CRC.shift_register
+115     @ADDFF.@SCRATCH8
+116     calc_CRC.i
+117-11A @DIV3232.P1
+117     calc_CRC.datab
+117-11A @MULFF.P1
+117     @FTOSD.@SCRATCH1
+118     calc_CRC.bits
+119     calc_CRC.@SCRATCH1
+11B     @MULFF.@SCRATCH1
+11B     @DIV3232.@SCRATCH1
+11C     @MULFF.@SCRATCH2
+11C     @DIV3232.@SCRATCH2
+11D     @MULFF.@SCRATCH3
+11D     @DIV3232.@SCRATCH3
+11E     @DIV3232.@SCRATCH4
+11F     @DIV3232.@SCRATCH5
+120     incomming_modbus_serial.c
+121     modbus_enable_timeout.enable
+121     modbus_calc_crc.data
+121     @GETCH_2_.@SCRATCH1
+121     incomming_modbus_serial.@SCRATCH1
+122     modbus_calc_crc.uIndex
+122-123 @SET_TICKS_1.P1
+122     @GETCH_2_.@SCRATCH2
+122     incomming_modbus_serial.@SCRATCH2
+123     modbus_calc_crc.@SCRATCH1
+F48     CCP_5_LOW
+F48     CCP_5
+F49     CCP_5_HIGH
+F4B     CCP_4_LOW
+F4B     CCP_4
+F4C     CCP_4_HIGH
+F4E     CCP_3_LOW
+F4E     CCP_3
+F4F     CCP_3_HIGH
+F51     CCP_2_LOW
+F51     CCP_2
+F52     CCP_2_HIGH
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBC     CCP_1
+FBC     CCP_1_LOW
+FBD     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0006A2  modbus_auchCRCHi.call
+0006C4  modbus_auchCRCHi.data
+0007C4  modbus_auchCRCLo.call
+0007E6  modbus_auchCRCLo.data
+0008E6  @const964.call
+0008F8  @const1029.call
+000904  @TIMERISR_1
+000910  @GETCH_2_
+000970  @SET_TICKS_1
+000992  modbus_enable_timeout
+0009A4  modbus_calc_crc
+0009E8  incomming_modbus_serial
+000A4C  @const1264.call
+000A5A  RCV_ON
+000A66  modbus_init
+000A74  @PSTRINGC_9600_31766_31767
+000A98  @GET_TICKS_1
+000ACE  modbus_timeout_now
+000B08  modbus_check_timeout
+000B26  modbus_kbhit
+000B4A  @FLT
+000BC4  @ITOF
+000BFA  @MULFF
+000CF0  @ADDFF
+000F68  ISR
+001128  @delay_ms1
+001152  @DIV1616
+001196  @PSTRINGCN_9600_31766_31767
+0011C0  @DIV88
+0011E8  @PRINTF_U_9600_31766_31767
+001256  @PRINTF_LU_9600_31766_31767
+0012FC  ler_batidas
+0013B6  le_batidas
+0013F4  @delay_us1
+001414  ow_reset
+00145A  write_bit
+001480  write_byte
+0014BC  read_bit
+0014E2  calc_CRC
+001538  ow_crc
+001554  Next
+001692  First
+00169E  FindDevices
+00171E  Send_MatchRom
+001780  read_byte
+0017C8  @FTOSD
+00180C  @DIV3232
+0018A0  @PRINTF_L32D_9600_31766_31767FPFPF
+001A42  le_DS18B20
+001C92  @PUTCHAR_2_
+001CF6  modbus_serial_putc
+001D1C  modbus_serial_send_start
+001D4A  modbus_serial_send_stop
+001D80  modbus_exception_rsp
+001D9C  modbus_read_discrete_input_rsp
+001DD8  modbus_read_holding_registers_rsp
+001E44  modbus_read_input_registers_rsp
+001EB0  modbus_write_single_coil_rsp
+001EE8  modbus_write_single_register_rsp
+001F20  swap_bits
+001F86  modbus_write_multiple_coils_rsp
+001FBE  modbus_write_multiple_registers_rsp
+001FF6  receiveFromModbus
+0023DE  MAIN
+0023DE  @cinit1
+002468  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    \\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\
+
+Project Files:
+    main.c                                                  [15-ago-16 14:13  CRC=7C53D11F]
+    main.h                                                  [02-ago-16 01:03  CRC=D872A938]
+    hardware.h                                              [02-ago-16 04:38  CRC=32252836]
+    C:\Program Files (x86)\PICC\Devices\18F26K80.h          [21-jun-13 16:05  CRC=D0128130]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [08-jun-11 14:39  CRC=0B6669CF]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-jul-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [14-jul-11 10:13  CRC=23EDEC8F]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-jan-08 13:55  CRC=2D1F019F]
+    variaveis.c                                             [15-ago-16 14:57  CRC=3531C6B4]
+    pulse.c                                                 [15-ago-16 14:47  CRC=65494BDB]
+    ctemp.c                                                 [15-ago-16 14:46  CRC=77E5E512]
+    onewire.c                                               [01-ago-16 00:22  CRC=3CD3A8CF]
+    umodbus.c                                               [01-ago-16 00:41  CRC=9DB07F54]
+    modbus_local.c                                          [30-jul-16 07:00  CRC=EA58E84A]
+    modbus_local.h                                          [30-jul-16 06:58  CRC=26E71866]
+    modbus_phy_layer_local.h                                [30-mai-13 14:23  CRC=CDB534E3]
+    modbus_app_layer_local.h                                [30-jul-16 06:59  CRC=B8DB7659]
+    modbus_phy_layer_rtu_local.c                            [01-ago-16 03:14  CRC=5FE606E1]
+    C:\Program Files (x86)\PICC\Drivers\modbus_app_layer.c  [16-mai-13 10:53  CRC=C73EB0AA]
+    C:\Program Files (x86)\PICC\Drivers\modbus_app_layer.h  [16-mai-13 11:41  CRC=CCCEAEAD]
+    C:\Program Files (x86)\PICC\Drivers\stdint.h            [30-dez-08 09:01  CRC=9F7F640F]
+    C:\Program Files (x86)\PICC\Drivers\bootloader.h        [13-fev-13 08:49  CRC=183DC8B7]
+
+Source signature=85928F8B
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F26K80
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

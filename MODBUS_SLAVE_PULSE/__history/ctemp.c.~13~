@@ -1,0 +1,44 @@
+#include <onewire.c>
+
+void le_DS18B20()
+{     
+      int8 i, tmp, numDev = 0;
+      float celsius;
+      int16 sensData, fract;
+      int8 scratch[9];      
+      unsigned char sign; 
+      
+      if (!ow_reset())     // If a device is present and it's time to send string 
+      {   
+         numDev = FindDevices();  
+          
+         write_byte(0xCC); // Skip Rom command 
+         write_byte(0x44); // Temperature convert command 
+         output_float(ONEWIRE); 
+         delay_ms(750);    // Max. conv. time is 750mS for 12 bit 
+         ow_reset(); 
+          
+         // read all devices on bus 
+         for (numRoms=1; numRoms <= numDev; numRoms++) 
+         { 
+            if (Send_MatchRom()) 
+            { 
+               write_byte(0xBE); // Read scratch pad command                
+               for(i=0; i<2; i++) 
+               { 
+                  scratch[i]= read_byte(); 
+               }            
+               // raw sensor data (16bit) 
+               sensData = make16(scratch[1], scratch[0]); 
+               
+               hold_regs[1] = sensData;               
+                
+            } 
+         }
+      }
+}
+
+void Verifica_temperatura()
+{  
+   
+}

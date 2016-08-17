@@ -1,0 +1,2 @@
+
+#define ONEWIRE PIN_A0

@@ -1,0 +1,19 @@
+#include <main.h>
+
+#define LOADER_END   0x5FF
+#include <bootloader.h>
+
+void main()
+{  
+   initialize();
+   
+   while(TRUE){     
+      if (kbhit()){
+         evt_serial();
+      }
+      
+      read_temperatura(1);
+      read_vitais(2);
+   }
+}
+

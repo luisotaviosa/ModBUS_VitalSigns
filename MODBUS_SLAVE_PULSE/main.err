@@ -1,0 +1,13 @@
+--- Info 300 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\modbus_phy_layer_rtu_local.c" Line 25(1,1): More info:   Timer 1 tick time is 1,02 ms
+>>> Warning 216 "main.c" Line 52(1,2): Interrupts disabled during call to prevent re-entrancy:  (modbus_enable_timeout)
+>>> Warning 216 "main.c" Line 52(1,2): Interrupts disabled during call to prevent re-entrancy:  (modbus_calc_crc)
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\variaveis.c" Line 25(5,13): Variable never used:   pulsePin
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\variaveis.c" Line 28(5,13): Variable never used:   fadeRate
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\variaveis.c" Line 31(6,12): Variable never used:   Signal
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\variaveis.c" Line 32(6,9): Variable never used:   IBI
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\variaveis.c" Line 33(9,14): Variable never used:   Pulse
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\variaveis.c" Line 34(9,11): Variable never used:   QS
+>>> Warning 202 "\\192.168.25.2\storage\Repositório\LuisOtávio\RS485\MODBUS_SLAVE - PULSE\pulse.c" Line 6(5,8): Variable never used:   qtd
+      Memory usage:   ROM=12%      RAM=6% - 8%
+      0 Errors,  9 Warnings.
+Build Successful.

@@ -1,0 +1,4 @@
+#include <18F26K80.h>
+#device ADC=10
+
+#define ONEWIRE PIN_A0

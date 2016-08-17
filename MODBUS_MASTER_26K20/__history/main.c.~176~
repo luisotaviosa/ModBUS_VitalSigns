@@ -1,0 +1,27 @@
+#include <main.h>
+
+#define LOADER_END   0x5FF
+#include <bootloader.h>
+
+#include <stdlib.h>
+#include <variaveis.c>
+#include <modbus_local.c>
+#include <umodbus.c>
+#include <userial.c>
+
+#INT_RDA
+void serial_isr(){ }
+
+void main()
+{
+   MotivoInicializacao();
+   
+   setup_adc_ports(NO_ANALOGS);
+   //init_pic();   
+   modbus_init();
+   
+   while(TRUE){
+      read_all_coils();
+   }
+}
+

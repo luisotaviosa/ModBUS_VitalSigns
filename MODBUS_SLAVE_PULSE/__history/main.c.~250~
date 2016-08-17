@@ -1,0 +1,67 @@
+#include <main.h>
+
+#define LOADER_END   0x5FF
+#include <bootloader.h>
+
+int le_ad(int num)
+{
+   set_adc_channel(num);
+   return read_adc();
+}
+
+void delay_x(uint32 millis_delay) {
+
+  uint16 micros_now = (uint16)micros();
+
+
+  while (millis_delay > 0) {
+
+    if (((uint16)micros() - micros_now) >= 1000) {
+
+      millis_delay--;
+
+      micros_now += 1000;
+
+    }
+
+  }
+}
+
+void le_batidas(){
+   for (int x = 0; x < 100; x++){
+        ISR();      
+        delay_ms(2);
+   }
+   
+   hold_regs[0] = BPM;
+   hold_regs[1] = IBI;
+}
+
+void main()
+{
+   //setup_adc_ports(NO_ANALOGS);
+   set_tris_a(0b00000011);
+   setup_comparator(NC_NC_NC_NC);               //Desabilita Comparadores
+   
+   setup_adc_ports(sAN1,VSS_VDD);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   modbus_init();
+
+   float time = 0;
+
+   fprintf(PC,"INICIALIZADO");
+      
+   for(;;)
+   {
+      while(!modbus_kbhit()) {
+         if (time > 5){            
+            le_batidas();
+            
+            time = 0;
+         }else{
+            time += 0.01;
+         }
+      }
+      receiveFromModbus();
+   }
+}
